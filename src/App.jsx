@@ -116,7 +116,7 @@ export default function App() {
       <section className="hero">
         <div className="inner hero-inner">
           <h1>Trouvez un poste<br />Admin Sys à Montpellier</h1>
-          <p>Offres agrégées depuis France Travail et Adzuna · Hérault (34)</p>
+          <p>France Travail · Indeed · APEC · HelloWork · Adzuna · Grands groupes</p>
           <div className="search-box">
             <svg className="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="8.5" cy="8.5" r="5.5" /><path d="M17 17l-4-4" />
