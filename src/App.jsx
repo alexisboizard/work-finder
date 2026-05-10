@@ -58,7 +58,7 @@ function SkeletonCard() {
 
 export default function App() {
   const [jobs, setJobs]   = useState([])
-  const [meta, setMeta]   = useState({ updatedAt: null, demo: false })
+  const [meta, setMeta]   = useState({ updatedAt: null, demo: false, activeSources: [] })
   const [q, setQ]         = useState('')
   const [source, setSource] = useState('Toutes')
   const [loading, setLoading] = useState(true)
@@ -72,7 +72,11 @@ export default function App() {
           setJobs(data)
         } else {
           setJobs(data.jobs ?? [])
-          setMeta({ updatedAt: data.updatedAt ?? null, demo: data.demo ?? false })
+          setMeta({
+            updatedAt: data.updatedAt ?? null,
+            demo: data.demo ?? false,
+            activeSources: data.activeSources ?? [],
+          })
         }
         setLoading(false)
       })
@@ -134,6 +138,25 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* ── Bandeau clés API manquantes ── */}
+      {!loading && !error && meta.activeSources.length < 2 && !meta.demo && (
+        <div className="setup-banner">
+          <span>
+            ⚡ Seulement <strong>{meta.activeSources[0] ?? '0 source'}</strong> active.
+            Ajoutez <a href="https://francetravail.io" target="_blank" rel="noopener noreferrer">France Travail</a> pour +50 offres/jour — inscription gratuite, clés à ajouter dans <code>Settings → Secrets</code>.
+          </span>
+        </div>
+      )}
+      {!loading && !error && meta.demo && (
+        <div className="setup-banner demo">
+          <span>
+            ⚠ Données de démo — aucune clé API configurée.
+            Ajoutez <a href="https://francetravail.io" target="_blank" rel="noopener noreferrer">France Travail</a> (gratuit)
+            et <a href="https://developer.adzuna.com" target="_blank" rel="noopener noreferrer">Adzuna</a> (gratuit) dans <code>Settings → Secrets</code>.
+          </span>
+        </div>
+      )}
 
       {/* ── Main ── */}
       <main className="main">
