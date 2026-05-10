@@ -1,0 +1,173 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+/* Header */
+.header {
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+/* Search */
+.search-bar {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Count */
+.count {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+/* Status messages */
+.status {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.status.error {
+  color: #dc2626;
+}
+
+/* Job list */
+.job-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.job-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  border-color: #d1d5db;
+}
+
+.job-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.job-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.job-meta {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.job-source {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.job-link {
+  flex-shrink: 0;
+  padding: 9px 18px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.job-link:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-link {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}

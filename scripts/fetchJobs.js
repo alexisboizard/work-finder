@@ -1,15 +1,64 @@
-
 import fs from 'fs'
 
+// Données de démonstration — remplacer par des appels API réels (France Travail, LinkedIn, etc.)
 const jobs = [
   {
-    title: "Admin Sys Linux",
-    company: "Example Corp",
+    title: "Administrateur Système Linux Senior",
+    company: "DataCenter Sud",
     location: "Montpellier",
-    url: "https://example.com",
-    source: "demo"
+    url: "https://example.com/jobs/1",
+    source: "linkedin"
+  },
+  {
+    title: "Technicien Infrastructure N2",
+    company: "ITServices34",
+    location: "Montpellier",
+    url: "https://example.com/jobs/2",
+    source: "indeed"
+  },
+  {
+    title: "Ingénieur Systèmes VMware / vSphere",
+    company: "Cloud Hérault",
+    location: "Montpellier",
+    url: "https://example.com/jobs/3",
+    source: "apec"
+  },
+  {
+    title: "Administrateur Systèmes & Réseaux",
+    company: "Région Occitanie",
+    location: "Montpellier",
+    url: "https://example.com/jobs/4",
+    source: "fonction-publique"
+  },
+  {
+    title: "DevOps / Admin Sys (télétravail partiel)",
+    company: "StartupTech",
+    location: "Montpellier",
+    url: "https://example.com/jobs/5",
+    source: "wttj"
+  },
+  {
+    title: "Responsable Infrastructure IT",
+    company: "CHU Montpellier",
+    location: "Montpellier",
+    url: "https://example.com/jobs/6",
+    source: "chu-montpellier"
+  },
+  {
+    title: "Administrateur Active Directory & M365",
+    company: "Banque Régionale",
+    location: "Montpellier",
+    url: "https://example.com/jobs/7",
+    source: "linkedin"
+  },
+  {
+    title: "Admin Sys N3 – Kubernetes / Ansible",
+    company: "ESN Montpellier",
+    location: "Montpellier (full remote possible)",
+    url: "https://example.com/jobs/8",
+    source: "indeed"
   }
 ]
 
-fs.writeFileSync("public/jobs.json", JSON.stringify(jobs, null, 2))
-console.log("jobs.json updated")
+fs.writeFileSync('public/jobs.json', JSON.stringify(jobs, null, 2))
+console.log(`✓ jobs.json mis à jour : ${jobs.length} offres`)
