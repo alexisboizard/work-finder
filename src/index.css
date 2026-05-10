@@ -19,7 +19,7 @@ body {
 
 /* Header */
 .header {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .header h1 {
@@ -35,12 +35,27 @@ body {
   font-size: 0.95rem;
 }
 
-/* Search */
-.search-bar {
-  position: relative;
-  margin-bottom: 20px;
+.last-updated {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 6px;
 }
 
+.demo-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Search */
 .search-input {
   width: 100%;
   padding: 14px 16px;
@@ -60,11 +75,44 @@ body {
   color: #9ca3af;
 }
 
+/* Source filter chips */
+.source-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.source-chip {
+  padding: 6px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background: white;
+  color: #374151;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.source-chip:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.source-chip.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
 /* Count */
 .count {
   font-size: 0.875rem;
   color: #6b7280;
-  margin-bottom: 16px;
+  margin-top: 16px;
+  margin-bottom: 12px;
 }
 
 /* Status messages */
@@ -84,14 +132,14 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .job-card {
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 20px 24px;
+  padding: 18px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,20 +169,33 @@ body {
 .job-meta {
   font-size: 0.875rem;
   color: #6b7280;
-  margin-top: 4px;
+  margin-top: 3px;
+}
+
+.job-tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .job-source {
   display: inline-block;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: #f3f4f6;
-  color: #6b7280;
+  background: #eff6ff;
+  color: #2563eb;
   padding: 2px 8px;
   border-radius: 4px;
-  margin-top: 8px;
+}
+
+.job-date {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #9ca3af;
 }
 
 .job-link {
@@ -169,5 +230,9 @@ body {
     width: 100%;
     text-align: center;
     padding: 10px;
+  }
+
+  .job-title {
+    white-space: normal;
   }
 }

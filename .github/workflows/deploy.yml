@@ -3,9 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  # Rafraîchit les offres tous les jours à 7h UTC (lun–ven)
+  # Rafraîchit les offres chaque matin à 7h UTC (lun–ven)
   schedule:
     - cron: '0 7 * * 1-5'
+  # Déclenchement manuel depuis l'onglet Actions
   workflow_dispatch:
 
 permissions:
@@ -33,6 +34,13 @@ jobs:
 
       - name: Fetch jobs
         run: npm run fetch
+        env:
+          # France Travail — https://francetravail.io/data/api/offres-emploi
+          FT_CLIENT_ID: ${{ secrets.FT_CLIENT_ID }}
+          FT_CLIENT_SECRET: ${{ secrets.FT_CLIENT_SECRET }}
+          # Adzuna — https://developer.adzuna.com
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
 
       - name: Build
         run: npm run build

@@ -1,58 +1,71 @@
-[
-  {
-    "title": "Administrateur Système Linux Senior",
-    "company": "DataCenter Sud",
-    "location": "Montpellier",
-    "url": "https://example.com/jobs/1",
-    "source": "linkedin"
-  },
-  {
-    "title": "Technicien Infrastructure N2",
-    "company": "ITServices34",
-    "location": "Montpellier",
-    "url": "https://example.com/jobs/2",
-    "source": "indeed"
-  },
-  {
-    "title": "Ingénieur Systèmes VMware / vSphere",
-    "company": "Cloud Hérault",
-    "location": "Montpellier",
-    "url": "https://example.com/jobs/3",
-    "source": "apec"
-  },
-  {
-    "title": "Administrateur Systèmes & Réseaux",
-    "company": "Région Occitanie",
-    "location": "Montpellier",
-    "url": "https://example.com/jobs/4",
-    "source": "fonction-publique"
-  },
-  {
-    "title": "DevOps / Admin Sys (télétravail partiel)",
-    "company": "StartupTech",
-    "location": "Montpellier",
-    "url": "https://example.com/jobs/5",
-    "source": "wttj"
-  },
-  {
-    "title": "Responsable Infrastructure IT",
-    "company": "CHU Montpellier",
-    "location": "Montpellier",
-    "url": "https://example.com/jobs/6",
-    "source": "chu-montpellier"
-  },
-  {
-    "title": "Administrateur Active Directory & M365",
-    "company": "Banque Régionale",
-    "location": "Montpellier",
-    "url": "https://example.com/jobs/7",
-    "source": "linkedin"
-  },
-  {
-    "title": "Admin Sys N3 – Kubernetes / Ansible",
-    "company": "ESN Montpellier",
-    "location": "Montpellier (full remote possible)",
-    "url": "https://example.com/jobs/8",
-    "source": "indeed"
-  }
-]
+{
+  "updatedAt": "2026-05-10T19:00:21.979Z",
+  "demo": true,
+  "count": 8,
+  "jobs": [
+    {
+      "title": "Administrateur Système Linux Senior",
+      "company": "DataCenter Sud",
+      "location": "Montpellier",
+      "url": "https://candidat.francetravail.fr/offres/detail/DEMO001",
+      "source": "France Travail",
+      "date": "2026-05-09"
+    },
+    {
+      "title": "Technicien Infrastructure N2",
+      "company": "ITServices34",
+      "location": "Montpellier",
+      "url": "https://candidat.francetravail.fr/offres/detail/DEMO002",
+      "source": "France Travail",
+      "date": "2026-05-08"
+    },
+    {
+      "title": "Ingénieur Systèmes VMware / vSphere",
+      "company": "Cloud Hérault",
+      "location": "Montpellier",
+      "url": "https://www.adzuna.fr/details/demo003",
+      "source": "Adzuna",
+      "date": "2026-05-07"
+    },
+    {
+      "title": "Administrateur Systèmes & Réseaux",
+      "company": "Région Occitanie",
+      "location": "Montpellier",
+      "url": "https://candidat.francetravail.fr/offres/detail/DEMO004",
+      "source": "France Travail",
+      "date": "2026-05-06"
+    },
+    {
+      "title": "DevOps / Admin Sys – Kubernetes & Ansible",
+      "company": "StartupTech",
+      "location": "Montpellier (remote partiel)",
+      "url": "https://www.adzuna.fr/details/demo005",
+      "source": "Adzuna",
+      "date": "2026-05-05"
+    },
+    {
+      "title": "Responsable Infrastructure IT",
+      "company": "CHU Montpellier",
+      "location": "Montpellier",
+      "url": "https://candidat.francetravail.fr/offres/detail/DEMO006",
+      "source": "France Travail",
+      "date": "2026-05-03"
+    },
+    {
+      "title": "Administrateur Active Directory & M365",
+      "company": "Banque Régionale",
+      "location": "Montpellier",
+      "url": "https://www.adzuna.fr/details/demo007",
+      "source": "Adzuna",
+      "date": "2026-05-02"
+    },
+    {
+      "title": "Admin Sys N3 – Linux / Bash / Puppet",
+      "company": "ESN Montpellier",
+      "location": "Montpellier",
+      "url": "https://www.adzuna.fr/details/demo008",
+      "source": "Adzuna",
+      "date": "2026-04-30"
+    }
+  ]
+}
