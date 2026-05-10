@@ -29,6 +29,10 @@ function relativeDate(str) {
 const SOURCE_STYLE = {
   'France Travail': { bg: '#dbeafe', color: '#1d4ed8' },
   'Adzuna':         { bg: '#fee2e2', color: '#b91c1c' },
+  'Indeed':         { bg: '#e0e7ff', color: '#4338ca' },
+  'APEC':           { bg: '#d1fae5', color: '#047857' },
+  'HelloWork':      { bg: '#fdf4ff', color: '#7c3aed' },
+  'Workday':        { bg: '#fff7ed', color: '#c2410c' },
 }
 
 function SourceBadge({ source }) {
