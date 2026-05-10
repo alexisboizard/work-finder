@@ -1,6 +1,7 @@
 {
-  "updatedAt": "2026-05-10T19:44:00.544Z",
+  "updatedAt": "2026-05-10T20:24:16.831Z",
   "demo": true,
+  "activeSources": [],
   "count": 10,
   "jobs": [
     {
@@ -20,67 +21,67 @@
       "date": "2026-05-08"
     },
     {
+      "title": "Ingénieur Infrastructure VMware",
+      "company": "Cloud Hérault",
+      "location": "Montpellier",
+      "url": "https://candidat.francetravail.fr/offres/detail/DEMO003",
+      "source": "France Travail",
+      "date": "2026-05-07"
+    },
+    {
       "title": "Admin Sys N2/N3 – Active Directory",
       "company": "Capgemini",
       "location": "Montpellier",
-      "url": "https://fr.indeed.com/viewjob?jk=DEMO003",
-      "source": "Indeed",
-      "date": "2026-05-07"
+      "url": "https://www.adzuna.fr/details/demo004",
+      "source": "Adzuna",
+      "date": "2026-05-06"
     },
     {
       "title": "Administrateur Linux / Ansible",
       "company": "SNCF",
-      "location": "Montpellier",
-      "url": "https://fr.indeed.com/viewjob?jk=DEMO004",
-      "source": "Indeed",
-      "date": "2026-05-06"
-    },
-    {
-      "title": "Ingénieur Systèmes VMware / vSphere",
-      "company": "Cloud Hérault",
       "location": "Montpellier",
       "url": "https://www.adzuna.fr/details/demo005",
       "source": "Adzuna",
       "date": "2026-05-05"
     },
     {
-      "title": "Responsable Infrastructure IT",
-      "company": "CHU Montpellier",
-      "location": "Montpellier",
-      "url": "https://www.apec.fr/offres-emploi/detail-offre/DEMO006.html",
-      "source": "APEC",
-      "date": "2026-05-03"
-    },
-    {
-      "title": "Ingénieur Systèmes / Admin Sys",
-      "company": "Safran",
-      "location": "Mauguio (34)",
-      "url": "https://www.apec.fr/offres-emploi/detail-offre/DEMO007.html",
-      "source": "APEC",
-      "date": "2026-05-02"
-    },
-    {
-      "title": "Administrateur Systèmes & Réseaux",
-      "company": "Thales",
-      "location": "Montpellier",
-      "url": "https://www.hellowork.com/fr-fr/emplois/DEMO008.html",
-      "source": "HelloWork",
-      "date": "2026-04-30"
-    },
-    {
       "title": "DevOps / Admin Sys – Kubernetes",
       "company": "Sopra Steria",
       "location": "Montpellier",
-      "url": "https://www.hellowork.com/fr-fr/emplois/DEMO009.html",
-      "source": "HelloWork",
+      "url": "https://www.adzuna.fr/details/demo006",
+      "source": "Adzuna",
+      "date": "2026-05-04"
+    },
+    {
+      "title": "Responsable Infrastructure IT",
+      "company": "CHU Montpellier",
+      "location": "Montpellier",
+      "url": "https://candidat.francetravail.fr/offres/detail/DEMO007",
+      "source": "France Travail",
+      "date": "2026-05-02"
+    },
+    {
+      "title": "Ingénieur Systèmes / Admin Sys",
+      "company": "Thales",
+      "location": "Montpellier",
+      "url": "https://www.adzuna.fr/details/demo008",
+      "source": "Adzuna",
+      "date": "2026-04-30"
+    },
+    {
+      "title": "Administrateur Systèmes & Réseaux",
+      "company": "Région Occitanie",
+      "location": "Montpellier",
+      "url": "https://candidat.francetravail.fr/offres/detail/DEMO009",
+      "source": "France Travail",
       "date": "2026-04-28"
     },
     {
-      "title": "Administrateur Systèmes Embarqués",
-      "company": "Airbus Defence",
-      "location": "Elancourt (34)",
-      "url": "https://airbus.wd3.myworkdayjobs.com/fr-FR/Airbus/DEMO010",
-      "source": "Workday",
+      "title": "Admin Sys N3 – Linux / Bash / Puppet",
+      "company": "ESN Montpellier",
+      "location": "Montpellier",
+      "url": "https://www.adzuna.fr/details/demo010",
+      "source": "Adzuna",
       "date": "2026-04-26"
     }
   ]

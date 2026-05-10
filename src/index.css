@@ -179,6 +179,35 @@ body {
 
 .clear-btn:hover { color: var(--gray-700); }
 
+/* ─── Bandeau setup ──────────────────────────────────────────── */
+.setup-banner {
+  background: #eff6ff;
+  border-bottom: 1px solid #bfdbfe;
+  padding: 10px 20px;
+  font-size: 0.82rem;
+  color: #1e40af;
+  text-align: center;
+}
+
+.setup-banner.demo {
+  background: #fffbeb;
+  border-bottom-color: #fde68a;
+  color: #92400e;
+}
+
+.setup-banner a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.setup-banner code {
+  background: rgba(0,0,0,.07);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.78rem;
+}
+
 /* ─── Main ───────────────────────────────────────────────────── */
 .main {
   flex: 1;
