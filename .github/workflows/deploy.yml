@@ -1,29 +1,65 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
+  # Rafraîchit les offres chaque matin à 7h UTC (lun–ven)
+  schedule:
+    - cron: '0 7 * * 1-5'
+  # Déclenchement manuel depuis l'onglet Actions
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: npm
 
-      - run: npm install
-      - run: npm run fetch
-      - run: npm run build
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Fetch jobs
+        run: npm run fetch
+        env:
+          # France Travail — https://francetravail.io/data/api/offres-emploi
+          FT_CLIENT_ID: ${{ secrets.FT_CLIENT_ID }}
+          FT_CLIENT_SECRET: ${{ secrets.FT_CLIENT_SECRET }}
+          # Adzuna — https://developer.adzuna.com
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
